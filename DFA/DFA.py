@@ -29,8 +29,8 @@ def machine(q, end):
 while True:
     hello = []
     start = state[0]
-    end = input("\nType the String to Check: ")
-    for i in end:
+    string = input("\nType the String to Check: ")
+    for i in string:
         start = machine(start, i)
     if hello[-1] in final_states:
         print(f'ACCEPTED ( {state[0]} -->' + ' --> '.join(hello) + ' )')
