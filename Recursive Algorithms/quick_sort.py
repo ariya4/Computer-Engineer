@@ -20,6 +20,7 @@ def quick_sort(lst):
         return quick_sort(left_list) + [lst[j]] + quick_sort(right_list)
 
 
+# یک روش دیگه برای حساب انجام الگوریتم غیر مراحلی که سر کلاس گفتیم
 def quick_sort2(lst):
     if len(lst) <= 1:
         return lst
@@ -40,5 +41,6 @@ def quick_sort2(lst):
 
 
 my_list = [5, 8, 9, 2, 1, 45, 12, 2]
-print(quick_sort(my_list))
-print(quick_sort2(my_list))
+print(my_list)
+print('Method 1:', quick_sort(my_list))
+print('Method 2:', quick_sort2(my_list))

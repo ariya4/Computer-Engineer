@@ -1,5 +1,5 @@
 num_list = [38, 27, 43, 3, 98, 1, 22, 21]
-print(num_list)
+print(f'Original list: {num_list}')
 
 
 def merge_sort(lst):
@@ -9,16 +9,16 @@ def merge_sort(lst):
     mid = len(lst) // 2
     left_list = lst[:mid]
     right_list = lst[mid:]
-    print('in split left', left_list)
-    print('in split right', right_list)
+    # print('in split left', left_list)
+    # print('in split right', right_list)
     left_list = merge_sort(left_list)
     right_list = merge_sort(right_list)
     return merge(left_list, right_list)
 
 
 def merge(L, R):
-    print('in merge left', L)
-    print('in merge right', R)
+    # print('in merge left', L)
+    # print('in merge right', R)
     merged = []
     i = 0
     j = 0
@@ -38,8 +38,8 @@ def merge(L, R):
         merged.append(R[i])
     # merged.extend(R[j:])
 
-    print('merged list', merged)
+    # print('merged list', merged)
     return merged
 
 
-print(merge_sort(num_list))
+print('Sorted List:', merge_sort(num_list))
