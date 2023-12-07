@@ -2,11 +2,13 @@ def recursive_power(x, n) -> int:
     if n == 0:
         return 1
     if n % 2 == 0:
-        temp = (recursive_power(x, n // 2)) ** 2
-        return temp
+        return (recursive_power(x, n // 2)) ** 2
     elif n % 2 == 1:
-        temp = x * recursive_power(x, n-1)
-        return temp
+        return x * recursive_power(x, n - 1)
 
 
-print(recursive_power(2, 10))
+base = int(input('Enter your base number (x ** n % p) --> x: '))
+power = int(input('Enter your power number (x ** n % p) n: '))
+module = int(input('Enter your base number (x ** n % p) p: '))
+
+print(f'remainder is: {recursive_power(base, power) % module}')
