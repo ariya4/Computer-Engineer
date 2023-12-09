@@ -8,7 +8,7 @@ def recursive_power(x, n) -> int:
 
 
 base = int(input('Enter your base number (x ** n % p) --> x: '))
-power = int(input('Enter your power number (x ** n % p) n: '))
-module = int(input('Enter your base number (x ** n % p) p: '))
+power = int(input('Enter your power number (x ** n % p) --> n: '))
+module = int(input('Enter your base number (x ** n % p) --> p: '))
 
 print(f'Remainder is: {recursive_power(base, power) % module}')
