@@ -1,19 +1,23 @@
 # Round Robin
 
-TS = 3
-programs = [['p1', 4], ['p2', 2], ['p3', 6]]
+# TS = 3
+# programs = [['p1', 4, 0], ['p2', 2, 0], ['p3', 6, 0]]
 
-# programs = []
-# TS = int(input("Enter the time slice: "))
-# num_programs = int(input("Enter the number of programs you want: "))
-# for i in range(num_programs):
-#     name = f'p{i+1}'
-#     execution_time = int(input(f"Enter the execution time of program {i + 1}: "))
-#     program = [name, execution_time]
-#     programs.append(program)
+programs = []
+TS = int(input("Enter the time slice: "))
+num_programs = int(input("Enter the number of programs you want: "))
+print()
+for i in range(num_programs):
+    name = f'p{i+1}'
+    execution_time = int(input(f"Enter the execution time of program {i + 1}: "))
+    EN = int(input(f"Enter the Entrance of program {i + 1}: "))
+    print()
+    program = [name, execution_time, EN]
+    programs.append(program)
 
 
-programs_copy = programs.copy()
+programs = sorted(programs, key=lambda x: x[2])
+length = len(programs)
 current_time = 0
 total = 0
 
@@ -32,5 +36,5 @@ while programs:
         total += current_time
     print(f"Time passed: {current_time} ms\n")
 
-print(f'Sum of the programs completed time: {total}')
-print(f'Average Waiting Time: {total - current_time}/{len(programs_copy)} = {(total - current_time)/len(programs_copy)}\nAverage Execution Time: {total}/{len(programs_copy)} = {total/len(programs_copy)}')
+print(f'Average Waiting Time: {total - current_time}/{length} = {(total - current_time)/length}'
+      f'\nAverage Execution Time: {total}/{length} = {total/length}')

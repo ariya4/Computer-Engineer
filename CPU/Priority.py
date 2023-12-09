@@ -6,6 +6,7 @@ import func
 #             ['p3', 5, 1, 3],
 #             ['p4', 3, 3, 1],
 #             ]
+
 programs = []
 num_programs = int(input("Enter the number of programs: "))
 
@@ -18,7 +19,7 @@ for i in range(num_programs):
     program = [name, EX2, priority, EN]
     programs.append(program)
 
-programs_sorted = func.ordering(programs)
+programs_sorted = func.ordering(programs, priority=True)
 
 
 SX1 = 0

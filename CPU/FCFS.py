@@ -26,5 +26,6 @@ for i in range(len(programs)):
     average_en += (program[1] - program[3])
 
 
-print(f'Average Waiting Time: {average_en}/{len(programs)} = {average_en/len(programs)}\nAverage Execution Time: {average_ex}/{len(programs)} = {average_ex/len(programs)}')
+print(f'Average Waiting Time: {average_en}/{len(programs)} = {average_en/len(programs)}\nAverage Execution Time: '
+      f'{average_ex}/{len(programs)} = {average_ex/len(programs)}')
 # programs_sorted = sorted(programs, key=lambda x: x[2])
