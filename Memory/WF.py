@@ -18,7 +18,9 @@ for i in range(len(program_lst)):
     memory_update = sorted(memory_update, key=lambda x: abs(x[0] - program_lst[i][1]), reverse=True)
     for j in range(len(memory_update)):
         if program_lst[i][1] <= memory_update[j][0]:
-            print(f'{program_lst[i][0]} (size: {program_lst[i][1]}) -> {memory_update[j][0]} -->  remaining space = {memory_update[j][0] - program_lst[i][1]}')
+            print(f'{program_lst[i][0]} (size: {program_lst[i][1]}) --> {memory_update[j][0]} --> item: '
+                  f'{memory.index(memory_update[j])+1}  remaining space = '
+                  f'{memory_update[j][0] - program_lst[i][1]}')
             # Update the memory block with new size and index value
             memory_update[j] = [memory_update[j][0] - program_lst[i][1], memory_update[j][1]]
             memory_update = sorted(memory_update, key=lambda x: x[1])
