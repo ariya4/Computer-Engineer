@@ -3,9 +3,9 @@ def recursive_power(base, power, module) -> int:
         print(f'({base}^{power} % {module}) = {base ** power} % {module} = {base ** power % module}')
         return base % module
     elif power % 2 == 0:
-        print(f'({base}^{power} % {module}) = ({base}^{power// 2} % {module})^2')
+        print(f'({base}^{power} % {module}) = ({base}^{power // 2} % {module})^2')
         temp = recursive_power(base, power // 2, module)
-        return temp**2 % module
+        return temp ** 2 % module
     elif power % 2 == 1:
         print(f'({base}^{power} % {module}) = ([{base} x ({base}^{power - 1} % {module})] % {module})')
         temp = recursive_power(base, power - 1, module)
