@@ -10,9 +10,7 @@ def quick_sort(lst):
                 i += 1
             elif pivot > lst[i]:
                 j += 1
-                temp = lst[j]
-                lst[j] = lst[i]
-                lst[i] = temp
+                lst[j], lst[i] = lst[i], lst[j]
         lst[pivot_index] = lst[j]
         lst[j] = pivot
         left_list = lst[:j]
