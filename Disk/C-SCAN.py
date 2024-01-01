@@ -1,14 +1,14 @@
 # C-Scan
 
-head_position = 52
-req_lst = [84, 6, 24, 48, 58, 12, 60]
+# head_position = 52
+# req_lst = [84, 6, 24, 48, 58, 12, 60]
 
-# head_position = int(input("What's your head Position: "))
-# req_lst = []
-# new_req = int(input('How many inputs? '))
-# for new in range(new_req):
-#     value = int(input('Enter new Request: '))
-#     req_lst.append(value)
+head_position = int(input("What's your head Position: "))
+req_lst = []
+new_req = int(input('How many inputs? '))
+for new in range(new_req):
+    value = int(input('Enter new Request: '))
+    req_lst.append(value)
 
 req_lst.extend([0, 99])
 req_lst.sort()

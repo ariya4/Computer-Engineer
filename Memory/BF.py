@@ -16,12 +16,12 @@ print(f'\nProgram list: {program_lst}')
 for i in range(len(program_lst)):
     print(f'\nMemory: {memory_update}')
     memory_update = sorted(memory_update, key=lambda x: abs(x[0] - program_lst[i][1]))
-    print(f'sorted memory: {memory_update}')
+    # print(f'sorted memory: {memory_update}')
     for j in range(len(memory_update)):
         if program_lst[i][1] <= memory_update[j][0]:
             print(f'{program_lst[i][0]} (size: {program_lst[i][1]}) -> {memory_update[j][0]} -->  remaining space = {memory_update[j][0] - program_lst[i][1]}')
             memory_update[j] = [memory_update[j][0] - program_lst[i][1], memory_update[j][1]]
-            print(f'updated sorted memory: {memory_update}')
+            # print(f'updated sorted memory: {memory_update}')
             memory_update = sorted(memory_update, key=lambda x: x[1])
             print(f'updated memory: {memory_update}\n')
             break
