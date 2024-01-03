@@ -1,3 +1,7 @@
+import random
+import time
+
+
 def recursive_power(base, power, module) -> int:
     if power == 1:
         print(f'({base}^{power} % {module}) = {base ** power} % {module} = {base ** power % module}')
@@ -12,9 +16,13 @@ def recursive_power(base, power, module) -> int:
         return (base * temp) % module
 
 
-x = int(input('Enter your base number (x ** n % p) --> x: '))
-n = int(input('Enter your power number (x ** n % p) --> n: '))
-p = int(input('Enter your module number (x ** n % p) --> p: '))
-print(f'Remainder is: {recursive_power(x, n, p)}')
+# x = int(input('Enter your base number (x ** n % p) --> x: '))
+# n = int(input('Enter your power number (x ** n % p) --> n: '))
+# p = int(input('Enter your module number (x ** n % p) --> p: '))
+# print(f'Remainder is: {recursive_power(x, n, p)}')
 
-# print(f'Remainder is: {recursive_power(3, 50000000, 13)}')
+
+# benchmark
+a = random.choices(range(1000000), k=3)
+print(f'Remainder is: {recursive_power(a[0], a[1], a[2])}')
+print(f'python asnwer: {(a[0] ** a[1]) % a[2]}')
