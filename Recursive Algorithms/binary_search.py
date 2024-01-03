@@ -1,7 +1,10 @@
+import random
+
+
 def binary_search(low, high, target, lst):
     print('In Function')
     if low > high:
-        return 'Not Found'
+        return 'Not Found!'
     else:
         mid = (low + high) // 2
         if lst[mid] == target:
@@ -14,12 +17,12 @@ def binary_search(low, high, target, lst):
             return binary_search(low, high, target, lst)
 
 
-num_list = [10, 12, 13, 14, 18, 20, 25, 27, 30, 35, 40, 45]
-
-# if we get an unsorted list (by getting the list by an input), it will be sorted by the following line
+user_range = int(input("Enter the range: "))
+user_sample = int(input("Enter number of samples: "))
+num_list = random.choices(range(user_range), k=user_sample)
 num_list.sort()
-
 print(num_list)
+
 x = int(input('What are you looking for? '))
 start_list = 0
 end_list = len(num_list) - 1

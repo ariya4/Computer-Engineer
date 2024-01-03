@@ -1,3 +1,6 @@
+import random
+
+
 def quick_sort(lst):
     if len(lst) <= 1:
         return lst
@@ -38,7 +41,10 @@ def quick_sort2(lst):
     return quick_sort2(left) + middle + quick_sort2(right)
 
 
-my_list = [5, 8, 9, 2, 1, 45, 12, 2]
-print(my_list)
+user_range = int(input("Enter the range: "))
+user_sample = int(input("Enter number of samples: "))
+my_list = random.choices(range(user_range), k=user_sample)
+print(f'Original list: {my_list}')
+
 print('Method 1:', quick_sort(my_list))
 print('Method 2:', quick_sort2(my_list))

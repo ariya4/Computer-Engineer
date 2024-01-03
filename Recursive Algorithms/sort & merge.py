@@ -1,4 +1,9 @@
-num_list = [38, 27, 43, 3, 98, 1, 22, 21]
+import random
+
+# benchmark
+user_range = int(input("Enter the range: "))
+user_sample = int(input("Enter number of samples: "))
+num_list = random.choices(range(user_range), k=user_sample)
 print(f'Original list: {num_list}')
 
 
