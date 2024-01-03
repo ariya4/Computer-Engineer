@@ -23,6 +23,8 @@ def recursive_power(base, power, module) -> int:
 
 
 # benchmark
-a = random.choices(range(1000000), k=3)
-print(f'Remainder is: {recursive_power(a[0], a[1], a[2])}')
-print(f'python asnwer: {(a[0] ** a[1]) % a[2]}')
+x = random.choices(range(1, 100), k=1)[0]
+n = random.choices(range(100000), k=1)[0]
+p = random.choices(range(1, 100), k=1)[0]
+print(f'Remainder is: {recursive_power(x, n, p)}')
+print(f'python asnwer: {(x ** n) % p}')
