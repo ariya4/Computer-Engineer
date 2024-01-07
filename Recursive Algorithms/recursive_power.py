@@ -1,6 +1,4 @@
 import random
-import time
-
 
 def recursive_power(base, power, module) -> int:
     if power == 1:
