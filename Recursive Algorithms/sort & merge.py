@@ -1,9 +1,7 @@
 import random
 
 # benchmark
-user_range = int(input("Enter the range: "))
-user_sample = int(input("Enter number of samples: "))
-num_list = random.choices(range(user_range), k=user_sample)
+num_list = random.choices(range(1000), k=20)
 print(f'Original list: {num_list}')
 
 

@@ -21,30 +21,8 @@ def quick_sort(lst):
         return quick_sort(left_list) + [lst[j]] + quick_sort(right_list)
 
 
-# یک روش دیگه برای حساب انجام الگوریتم غیر مراحلی که سر کلاس گفتیم
-def quick_sort2(lst):
-    if len(lst) <= 1:
-        return lst
-
-    pivot = lst[0]
-    left = []
-    middle = []
-    right = []
-    for i in lst:
-        if i == pivot:
-            middle.append(i)
-        elif i > pivot:
-            right.append(i)
-        else:
-            left.append(i)
-
-    return quick_sort2(left) + middle + quick_sort2(right)
-
-
-user_range = int(input("Enter the range: "))
-user_sample = int(input("Enter number of samples: "))
-my_list = random.choices(range(user_range), k=user_sample)
+# benchmark
+my_list = random.choices(range(1000), k=20)
 print(f'Original list: {my_list}')
 
 print('Method 1:', quick_sort(my_list))
-print('Method 2:', quick_sort2(my_list))

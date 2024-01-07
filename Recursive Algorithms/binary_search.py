@@ -17,9 +17,8 @@ def binary_search(low, high, target, lst):
             return binary_search(low, high, target, lst)
 
 
-user_range = int(input("Enter the range: "))
-user_sample = int(input("Enter number of samples: "))
-num_list = random.choices(range(user_range), k=user_sample)
+# benchmark
+num_list = random.choices(range(1000), k=20)
 num_list.sort()
 print(num_list)
 
