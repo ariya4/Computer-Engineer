@@ -1,8 +1,5 @@
 import random
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 
 def recursive_power(base, power, module) -> int:
     if power == 1:
@@ -29,4 +26,5 @@ x = random.choices(range(1, 100), k=1)[0]
 n = random.choices(range(100000), k=1)[0]
 p = random.choices(range(1, 100), k=1)[0]
 print(f'Remainder is: {recursive_power(x, n, p)}')
+print(f'python answer: {pow(x, n, p)}')
 print(f'python asnwer: {(x ** n) % p}')
