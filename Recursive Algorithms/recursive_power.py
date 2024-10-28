@@ -1,5 +1,5 @@
 import random
-
+import time
 
 def recursive_power(base, power, module) -> int:
     if power == 1:
@@ -23,8 +23,18 @@ def recursive_power(base, power, module) -> int:
 
 # benchmark
 x = random.choices(range(1, 100), k=1)[0]
-n = random.choices(range(100000), k=1)[0]
+n = random.choices(range(1, 10000000), k=1)[0]
 p = random.choices(range(1, 100), k=1)[0]
+
+start_time = time.time()
 print(f'Remainder is: {recursive_power(x, n, p)}')
-print(f'python answer: {pow(x, n, p)}')
-print(f'python asnwer: {(x ** n) % p}')
+end_time = time.time()
+print(f'Time taken: {end_time - start_time}')
+start_time = time.time()
+print(f'python answer 1: {pow(x, n, p)}')
+end_time = time.time()
+print(f'time taken: {end_time - start_time}')
+start_time = time.time()
+print(f'python asnwer 2: {(x ** n) % p}')
+end_time = time.time()
+print(f'time taken: {end_time - start_time}')
